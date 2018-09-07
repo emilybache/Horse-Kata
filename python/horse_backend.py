@@ -15,5 +15,5 @@ def filter_sort_paginate_table(table_data: dict,
 
     # todo: paginate horse table using pagination_metadata
 
-    # todo: package the horse table into a PaginatedTableDto
+    # todo: package the filtered, sorted, paginated horse table into a PaginatedTableDto
     return None
