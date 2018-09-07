@@ -73,14 +73,14 @@ def sample_horse_data():
 def sample_filter_metadata():
     """Sample filter metadata that filters on two fields
     Breed must contain 'Thoroughbred' and age must equal 3"""
-    return {"Breed": FilterMetadataDto(value="Thoroughbred", matchMode="Contains"),
-            "Age": FilterMetadataDto(value=3, matchMode="Equals")}
+    return [FilterMetadataDto(column_header="Breed", value="Thoroughbred", matchMode="Contains"),
+            FilterMetadataDto(column_header="Age", value=3, matchMode="Equals")]
 
 
 def sample_sort_metadata():
     """Sample sort metadata. You only ever sort on one field.
     In this example you should sort by horse height descending"""
-    return SortMetadataDto(column="Height", order="Descending")
+    return SortMetadataDto(column_header="Height", order="Descending")
 
 
 def sample_pagination_metadata():

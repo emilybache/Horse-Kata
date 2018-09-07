@@ -5,6 +5,6 @@ from dataclasses import dataclass
 class SortMetadataDto:
     "the front end provides this data about the requested sort order"
 
-    column: str
+    column_header: str
     order: str
 
