@@ -4,7 +4,8 @@ from sort import SortMetadataDto
 from paginate import PaginatedTableDto, PaginationMetadataDto
 
 
-def filter_sort_paginate_table(table_data: dict,
+def filter_sort_paginate_table(table_headers: list,
+                               table_data: list,
                                filter_metadata: FilterMetadataDto,
                                sort_metadata: SortMetadataDto,
                                pagination_metadata: PaginationMetadataDto) -> PaginatedTableDto:
@@ -15,5 +16,4 @@ def filter_sort_paginate_table(table_data: dict,
 
     # todo: paginate horse table using pagination_metadata
 
-    # todo: package the filtered, sorted, paginated horse table into a PaginatedTableDto
     return None
