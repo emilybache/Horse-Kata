@@ -1,7 +1,7 @@
 Horse Kata
 ===========
 
-This is an exercise helping you to lern to test-drive filter, sort and paginate a bunch of data.
+This is an exercise helping you to learn to test-drive filter, sort and paginate a bunch of data.
 In this case the data concerns horses.
 
 You have some sample data showing you what horse data could look like. You also
