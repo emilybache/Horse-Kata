@@ -21,7 +21,7 @@ def sample_horse_data():
 
 def sample_filter_metadata():
     """Sample filter metadata that filters on two fields
-    Breed must contain 'Thoroughbred' and age must equal 3"""
+    Breed must equal 'Thoroughbred' and age must equal 3"""
     return [FilterMetadataDto(column_header="Breed", value="Thoroughbred", matchMode="Equals"),
             FilterMetadataDto(column_header="Age", value=3, matchMode="Equals")]
 
@@ -33,7 +33,7 @@ def sample_sort_metadata():
 
 
 def sample_pagination_metadata():
-    """Sample pagination metadata. In this example, each page of data should have 2 rows and
+    """Sample pagination metadata. In this example, each page of data should have 3 rows and
     you would like to look at page 1 of the data. The current page is zero index based, so this
     indicates the second page"""
     return PaginationMetadataDto(page_size=3, current_page=1)
