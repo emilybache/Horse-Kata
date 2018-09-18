@@ -12,11 +12,11 @@ namespace horse
         public static PaginatedTable FilterSortPaginateTable(List<string> headers, List<List<object>> tableData,
             List<FilterMetadata> filters, SortMetadata sortMetadata, PaginationMetadata paginationMetadata)
         {
-            // todo: filter horse table using filters
+            // TODO: filter horse table using filters
 
-            // todo: sort horse table using sortMetadata
+            // TODO: sort horse table using sortMetadata
 
-            // todo: paginate horse table using paginationMetadata
+            // TODO: paginate horse table using paginationMetadata
 
             throw new NotImplementedException();
         }

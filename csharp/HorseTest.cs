@@ -8,6 +8,7 @@ namespace horse
         [TestMethod]
         public void Foo()
         {
+            // TODO: implement this test
             Assert.AreEqual(true, false);
         }
     }
