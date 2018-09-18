@@ -6,9 +6,9 @@ namespace horse
     public class HorseTest
     {
         [TestMethod]
-        public void GetSpeedOfEuropeanhorse()
+        public void Foo()
         {
-            Assert.AreEqual(12.0, 21.0);
+            Assert.AreEqual(true, false);
         }
     }
 }
