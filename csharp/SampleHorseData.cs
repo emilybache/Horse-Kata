@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace horse
 {
@@ -22,11 +23,11 @@ namespace horse
         {
             return new List<List<Object>>
             {
-                {"Thoroughbred", "Bay", 1.60, 3, true},
-                {"Thoroughbred", "Grey", 1.55, 3, true},
-                {"Arabian horse", "Bay", 0.95, 5, true},
-                {"Shetland Pony", "Black", 1.01, 2, false},
-                {"Shire horse", "Black", 1.51, 4, true},
+                new List<object>{"Thoroughbred", "Bay", 1.60, 3, true},
+                new List<object>{"Thoroughbred", "Grey", 1.55, 3, true},
+                new List<object>{"Arabian horse", "Bay", 0.95, 5, true},
+                new List<object>{"Shetland Pony", "Black", 1.01, 2, false},
+                new List<object>{"Shire horse", "Black", 1.51, 4, true},
             };
         }
 
@@ -38,8 +39,8 @@ namespace horse
         {
             return new List<FilterMetadata>
             {
-                FilterMetadata("Breed", "Thoroughbred"),
-                FilterMetadata("Age", 3),
+                new FilterMetadata("Breed", "Thoroughbred"),
+                new FilterMetadata("Age", 3),
             };
         }
 
@@ -49,7 +50,7 @@ namespace horse
         /// </summary>
         public static SortMetadata GetSampleSortMetadata()
         {
-            return new SortMetadata("Height", order = "DESCENDING");
+            return new SortMetadata("Height", "DESCENDING");
         }
 
         /// <summary>
@@ -58,7 +59,7 @@ namespace horse
         /// </summary>
         public static PaginationMetadata GetSamplePaginationMetadata()
         {
-            return new PaginationMetadata(firstRecordInPage = 4, pageSize = 3);
+            return new PaginationMetadata(4, 3);
         }
     }
 
