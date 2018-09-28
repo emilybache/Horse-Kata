@@ -54,12 +54,11 @@ namespace horse
 
         /// <summary>
         /// Sample pagination metadata. In this example, each page of data should have 3 rows and
-        /// you would like to look at page 1 of the data.The current page is zero index based, so this
-        /// indicates the second page
+        /// the first record that should be shown on the page is the one at index 4.
         /// </summary>
         public static PaginationMetadata GetSamplePaginationMetadata()
         {
-            return new PaginationMetadata(pageSize=3, currentPage=1);
+            return new PaginationMetadata(firstRecordInPage = 4, pageSize = 3);
         }
     }
 
