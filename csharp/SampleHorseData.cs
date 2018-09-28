@@ -21,13 +21,13 @@ namespace horse
         /// </summary>
         public static List<List<object>> GetSampleTableData()
         {
-            return new List<List<Object>>
+            return new List<List<object>>
             {
                 new List<object>{"Thoroughbred", "Bay", 1.60, 3, true},
                 new List<object>{"Thoroughbred", "Grey", 1.55, 3, true},
-                new List<object>{"Arabian horse", "Bay", 0.95, 5, true},
+                new List<object>{"Arabian horse", "Bay", 1.51, 5, true},
                 new List<object>{"Shetland Pony", "Black", 1.01, 2, false},
-                new List<object>{"Shire horse", "Black", 1.51, 4, true},
+                new List<object>{"Shire horse", "Black", 1.71, 4, true},
             };
         }
 
