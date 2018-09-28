@@ -24,9 +24,9 @@ namespace horse
             {
                 {"Thoroughbred", "Bay", 1.60, 3, true},
                 {"Thoroughbred", "Grey", 1.55, 3, true},
-                {"Shetland", "Bay", 0.95, 5, true},
-                {"Shetland", "Black", 1.01, 2, false},
-                {"Icelandic", "Black", 1.51, 4, true},
+                {"Arabian horse", "Bay", 0.95, 5, true},
+                {"Shetland Pony", "Black", 1.01, 2, false},
+                {"Shire horse", "Black", 1.51, 4, true},
             };
         }
 
@@ -38,8 +38,8 @@ namespace horse
         {
             return new List<FilterMetadata>
             {
-                FilterMetadata("Breed", "Thoroughbred", matchMode = "Equals"),
-                FilterMetadata("Age", 3, matchMode = "Equals"),
+                FilterMetadata("Breed", "Thoroughbred"),
+                FilterMetadata("Age", 3),
             };
         }
 

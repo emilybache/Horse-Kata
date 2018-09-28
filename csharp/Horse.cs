@@ -27,13 +27,16 @@ namespace horse
     /// </summary>
     public class PaginationMetadata 
     {
-        private int pageSize;
-        private int currentPage;
+        // the index of the first record to be shown in the current page of data
+        private int FirstRecordInPage { get; set; }
 
-        public PaginationMetadata(int pageSize, int currentPage)
+        // the number of rows to show in this page
+        private int PageSize { get; set; }
+
+        public PaginationMetadata(int firstRecordInPage, int pageSize)
         {
-            this.pageSize = pageSize;
-            this.currentPage = currentPage;
+            this.FirstRecordInPage = firstRecordInPage;
+            this.PageSize = pageSize;
         }
     }
 
@@ -42,13 +45,13 @@ namespace horse
     /// </summary>
     public class SortMetadata
     {
-        private string columnHeader;
-        private string order;
+        private string ColumnHeader { get; set; }
+        private string SortOrder { get; set; }
 
-        public SortMetadata(string columnHeader, string order)
+        public SortMetadata(string columnHeader, string sortOrder)
         {
-            this.columnHeader = columnHeader;
-            this.order = order;
+            this.ColumnHeader = columnHeader;
+            this.SortOrder = sortOrder;
         }
     }
 
@@ -57,16 +60,14 @@ namespace horse
     /// </summary>
     public class FilterMetadata
     {
-        private string columnHeader;
-        private object value;
-        private string matchMode;
-
-        public FilterMetadata(string columnHeader, object value, string matchMode)
+        private string ColumnHeader { get; set; }
+        private object Value { get; set; }
+        
+        public FilterMetadata(string columnHeader, object value)
         {
-            this.columnHeader = columnHeader;
-            this.value = value;
-            this.matchMode = matchMode;
-        }
+            this.ColumnHeader = columnHeader;
+            this.Value = value;
+       }
     }
 
 
@@ -76,19 +77,19 @@ namespace horse
     public class PaginatedTable
     {
         // the headers for the table
-        private List<string> headers;
+        private List<string> Headers { get; set; }
 
         // The data to show in the current page of the table
-        private List<List<string>> tableData;
+        private List<List<string>> TableData { get; set; }
 
         // the total number of rows, including those rows not shown on the current page
-        private int totalRows;
+        private int TotalRows { get; set; }
 
         public PaginatedTable(List<string> headers, List<List<string>> tableData, int totalRows)
         {
-            this.headers = headers;
-            this.tableData = tableData;
-            this.totalRows = totalRows;
+            this.Headers = headers;
+            this.TableData = tableData;
+            this.TotalRows = totalRows;
         }
     }
 }
