@@ -28,10 +28,10 @@ namespace horse
     public class PaginationMetadata 
     {
         // the index of the first record to be shown in the current page of data
-        private int FirstRecordInPage { get; set; }
+        public int FirstRecordInPage { get; set; }
 
         // the number of rows to show in this page
-        private int PageSize { get; set; }
+        public int PageSize { get; set; }
 
         public PaginationMetadata(int firstRecordInPage, int pageSize)
         {
@@ -45,8 +45,8 @@ namespace horse
     /// </summary>
     public class SortMetadata
     {
-        private string ColumnHeader { get; set; }
-        private string SortOrder { get; set; }
+        public string ColumnHeader { get; set; }
+        public string SortOrder { get; set; }
 
         public SortMetadata(string columnHeader, string sortOrder)
         {
@@ -60,8 +60,8 @@ namespace horse
     /// </summary>
     public class FilterMetadata
     {
-        private string ColumnHeader { get; set; }
-        private object Value { get; set; }
+        public string ColumnHeader { get; set; }
+        public object Value { get; set; }
         
         public FilterMetadata(string columnHeader, object value)
         {
@@ -77,13 +77,13 @@ namespace horse
     public class PaginatedTable
     {
         // the headers for the table
-        private List<string> Headers { get; set; }
+        public List<string> Headers { get; set; }
 
         // The data to show in the current page of the table
-        private List<List<string>> TableData { get; set; }
+        public List<List<string>> TableData { get; set; }
 
         // the total number of rows, including those rows not shown on the current page
-        private int TotalRows { get; set; }
+        public int TotalRows { get; set; }
 
         public PaginatedTable(List<string> headers, List<List<string>> tableData, int totalRows)
         {
