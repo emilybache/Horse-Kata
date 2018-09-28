@@ -40,7 +40,7 @@ namespace horse
             return new List<FilterMetadata>
             {
                 new FilterMetadata("Breed", "Thoroughbred"),
-                new FilterMetadata("Age", 3),
+                new FilterMetadata("Age", 2),
             };
         }
 

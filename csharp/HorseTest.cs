@@ -6,10 +6,19 @@ namespace horse
     public class HorseTest
     {
         [TestMethod]
-        public void Foo()
+        public void FilterSortPaginate()
         {
-            // TODO: implement this test
-            Assert.AreEqual(true, false);
+            // Arrange
+            var headers = SampleHorseData.GetSampleHeaders();
+            var tableData = SampleHorseData.GetSampleTableData();
+            var filters = SampleHorseData.GetSampleFilters();
+            var sortMetadata = SampleHorseData.GetSampleSortMetadata();
+            var paginationMetadata = SampleHorseData.GetSamplePaginationMetadata();
+
+            // Act
+            var table = Horse.FilterSortPaginateTable(headers, tableData, filters, sortMetadata, paginationMetadata);
+            
+            // TODO: Assert something here
         }
     }
 }

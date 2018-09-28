@@ -9,8 +9,12 @@ namespace horse
         /// <summary>
         /// This method is called by the front end when it wants to display a page of horse data.
         /// </summary>
-        public static PaginatedTable FilterSortPaginateTable(List<string> headers, List<List<object>> tableData,
-            List<FilterMetadata> filters, SortMetadata sortMetadata, PaginationMetadata paginationMetadata)
+        public static PaginatedTable FilterSortPaginateTable(
+            List<string> headers, 
+            List<List<object>> tableData,
+            List<FilterMetadata> filters, 
+            SortMetadata sortMetadata, 
+            PaginationMetadata paginationMetadata)
         {
             // TODO: filter horse table using filters
 

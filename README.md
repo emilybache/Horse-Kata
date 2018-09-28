@@ -1,14 +1,16 @@
 Horse Kata
 ===========
 
-This is an exercise helping you to learn to test-drive filter, sort and paginate a bunch of data.
+This is an exercise helping you to learn Test-Driven Development. Your task is to test-drive a function that filters, sorts and paginates a bunch of data.
 In this case the data concerns horses.
 
-You have some sample data showing you what horse data could look like. You also
-have examples of the kinds of filtering, sorting and pagination that might be required.
+One of the challenges of this exercise is to design suitable test data. There is some sample data provided which you can use as a starting point. Feel free to modify it as needed.
 
-Your job is to implement the function in the horse backend marked with 'TODO' statements.
-This function should filter, sort and paginate an arbitrary table of horse data, as specified.
+There is also a sample test case provided which is not finished. Feel free to re-design it as you wish.
+
+There is a function in the horse backend marked with 'TODO' statements.
+This function should filter, sort and paginate an arbitrary table of horse data, as specified. 
+You can change anything about the code, except for the signature of this function. It will be called by a front-end component which expects exactly this signature.
 
 Note on data size and performance: 
 - Assume the table data will have no more than 50 000 rows and 100 columns, and will easily fit into available memory space.
