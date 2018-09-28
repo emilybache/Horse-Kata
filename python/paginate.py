@@ -17,6 +17,6 @@ class PaginatedTableDto:
 class PaginationMetadataDto:
     "The front end provides this data about the requested pagination"
 
+    first_record_index: int
     page_size: int
-    current_page: int
 

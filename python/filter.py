@@ -7,4 +7,3 @@ class FilterMetadataDto:
 
     column_header: str
     value: object
-    matchMode: str
