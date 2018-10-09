@@ -45,3 +45,15 @@ The table data might look like this, although you should write code that would w
                       ["Shire horse", "Black", 1.71, 4, true]]
     }
 
+You should return data that has this format:
+
+    {
+        "Headers": ["Breed", "Colour", "Height", "Age", "Shoes"],
+        "TableData": [["Thoroughbred", "Grey", 1.55, 3, true],
+                      ["Arabian horse", "Bay", 1.51, 5, true],
+                      ["Shetland Pony", "Black", 1.01, 2, false],
+                      ["Shire horse", "Black", 1.71, 4, true]],
+        "TotalRows": 6
+    }
+
+"TotalRows" refers to the actual number of rows that exist in the back end, it will normally be larger than the number of rows returned to the front end. The data returned should satisfy the filter, sorting and pagination request. (Note, the data in this example doesn't do that. Part of the exercise is to come up with better test data).
