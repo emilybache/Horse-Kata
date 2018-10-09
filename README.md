@@ -36,7 +36,7 @@ A request from the front end might look like this:
         "Pagination": {"FirstRecordInPage": 4, "PageSize": 3}
     }
 
-The table data you have in the back end and might look like this. (You should write code that would work with more columns and more rows):
+The table data you have in the back end and might look like this: (You should write code that would work with more columns and more rows).
 
     {
         "Headers": ["Breed", "Colour", "Height", "Age", "Shoes"],
