@@ -23,7 +23,9 @@ Use Test-Driven Development!
 Language Independent Instructions
 ---------------------------------
 
-If your favourite programming language isn't present in this repository, please feel free to make a translation and send me a pull request. Alternatively, use this json as a starting point.
+If your favourite programming language isn't present in this repository, please feel free to make a translation and send me a pull request. Alternatively, use the json below as a starting point. 
+
+I didn't want to include parsing json as part of the exercise since it's awkward to do in some languages, and isn't the main thing I want people to learn how to do. My focus is really on TDD, small steps, and particularly in this case, designing good test data. Having said that, the json is below if you prefer to start from there.
 
 A request from the front end might look like this:
 
@@ -34,7 +36,7 @@ A request from the front end might look like this:
         "Pagination": {"FirstRecordInPage": 4, "PageSize": 3}
     }
 
-The table data might look like this, although you should write code that would work with more columns and more rows:
+The table data you have in the back end and might look like this. (You should write code that would work with more columns and more rows):
 
     {
         "Headers": ["Breed", "Colour", "Height", "Age", "Shoes"],
@@ -45,15 +47,15 @@ The table data might look like this, although you should write code that would w
                       ["Shire horse", "Black", 1.71, 4, true]]
     }
 
-You should return data that has this format:
+You should return data to the front end in this format:
 
     {
         "Headers": ["Breed", "Colour", "Height", "Age", "Shoes"],
-        "TableData": [["Thoroughbred", "Grey", 1.55, 3, true],
-                      ["Arabian horse", "Bay", 1.51, 5, true],
-                      ["Shetland Pony", "Black", 1.01, 2, false],
-                      ["Shire horse", "Black", 1.71, 4, true]],
+        "TableData": [["Thoroughbred", "Grey", "1.55", "3", "true"],
+                      ["Arabian horse", "Bay", "1.51", "5", "true"],
+                      ["Shetland Pony", "Black", "1.01", "2", "false"],
+                      ["Shire horse", "Black", "1.71", "4", "true"]],
         "TotalRows": 6
     }
 
-"TotalRows" refers to the actual number of rows that exist in the back end, it will normally be larger than the number of rows returned to the front end. The data returned should satisfy the filter, sorting and pagination request. (Note, the data in this example doesn't do that. Part of the exercise is to come up with better test data).
+"TotalRows" refers to the actual number of rows that exist in the back end that match the criteria, it will normally be larger than the number of rows in "TableData". The data should all be presented as strings, and satisfy the filter, sorting and pagination request. (Note, the data in this example doesn't do that. Part of the exercise is to come up with better test data).
