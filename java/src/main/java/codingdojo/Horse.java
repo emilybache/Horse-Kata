@@ -23,9 +23,14 @@ public class Horse {
         // TODO: paginate horse table using paginationMetadata
 
         // Map all the data to Strings for the front end
-        List<List<String>> tableDataAsStrings = tableData.stream().map(
-                row -> row.stream().map(Object::toString).collect(Collectors.toList())
-        ).collect(Collectors.toList());
+        List<List<String>> tableDataAsStrings = tableData
+            .stream()
+            .map(row -> row
+                .stream()
+                .map(Object::toString)
+                .collect(Collectors.toList())
+            )
+            .collect(Collectors.toList());
 
         return new PaginatedTable(headers, tableDataAsStrings, tableData.size());
     }
