@@ -2,6 +2,8 @@ package codingdojo;
 
 
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class Horse {
 
@@ -12,7 +14,7 @@ public class Horse {
             List<String> headers,
             List<List<Object>> tableData,
             List<FilterMetadata> filters,
-            SortMetadata sortMetadata,
+            Optional<SortMetadata> maybeSortMetadata,
             PaginationMetadata paginationMetadata) {
         // TODO: filter horse table using filters
 
@@ -20,7 +22,12 @@ public class Horse {
 
         // TODO: paginate horse table using paginationMetadata
 
-        throw new RuntimeException("Not yet implemented");
+        // Map all the data to Strings for the front end
+        List<List<String>> tableDataAsStrings = tableData.stream().map(
+                row -> row.stream().map(Object::toString).collect(Collectors.toList())
+        ).collect(Collectors.toList());
+
+        return new PaginatedTable(headers, tableDataAsStrings, tableData.size());
     }
 }
 
