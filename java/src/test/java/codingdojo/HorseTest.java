@@ -1,4 +1,4 @@
-﻿package codingdojo;
+package codingdojo;
 
 import org.junit.jupiter.api.Test;
 

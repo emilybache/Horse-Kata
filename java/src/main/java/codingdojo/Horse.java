@@ -1,4 +1,4 @@
-﻿package codingdojo;
+package codingdojo;
 
 
 import java.util.List;
