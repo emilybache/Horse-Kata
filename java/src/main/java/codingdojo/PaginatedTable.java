@@ -27,4 +27,16 @@ public class PaginatedTable {
         this.tableData = tableData;
         this.totalRows = totalRows;
     }
+
+    public List<String> getHeaders() {
+        return headers;
+    }
+
+    public List<List<String>> getTableData() {
+        return tableData;
+    }
+
+    public int getTotalRows() {
+        return totalRows;
+    }
 }
