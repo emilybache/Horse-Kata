@@ -52,15 +52,6 @@ namespace horse
         {
             return new SortMetadata("Height", "DESCENDING");
         }
-
-        /// <summary>
-        /// Sample pagination metadata. In this example, each page of data should have 3 rows and
-        /// the first record that should be shown on the page is the one at index 4.
-        /// </summary>
-        public static PaginationMetadata GetSamplePaginationMetadata()
-        {
-            return new PaginationMetadata(4, 3);
-        }
     }
 
 }

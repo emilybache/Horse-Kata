@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace horse
 {
@@ -22,7 +23,8 @@ namespace horse
 
             // TODO: paginate horse table using paginationMetadata
 
-            throw new NotImplementedException();
+            var tableDataAsStrings = tableData.Select(row => row.Select(x=>x.ToString()).ToList()).ToList();
+            return new PaginatedTable(headers, tableDataAsStrings, tableData.Count);
         }
     }
 
