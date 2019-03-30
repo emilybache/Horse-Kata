@@ -1,7 +1,9 @@
 package horse
 
-import org.junit.Assert.fail
 import org.junit.Test
+import com.google.gson.Gson
+import org.approvaltests.Approvals
+
 
 class HorseTests {
   @Test
@@ -17,6 +19,9 @@ class HorseTests {
     val table = Horse.filterSortPaginateTable(headers, tableData, filters, sortMetadata, paginationMetadata)
 
     // assert
-    fail("Assert something here")
+    val gson = Gson()
+    val json = gson.toJson(table)
+    // Assert the data to be sent to the front end
+    Approvals.verifyJson(json)
   }
 }
