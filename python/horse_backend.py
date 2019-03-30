@@ -16,4 +16,10 @@ def filter_sort_paginate_table(table_headers: list,
 
     # todo: paginate horse table using pagination_metadata
 
-    return None
+    return PaginatedTableDto(totalRows = len(table_data),
+                             headers = table_headers[:],
+                             rowData = [
+                                 [str(elem) for elem in row]
+                                        for row in table_data
+                             ]
+                             )
